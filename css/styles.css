@@ -1,9 +1,131 @@
 body {
-    font-family: 'raleway', sans-serif;
-    background-color: #f4f4f4;
+    font-family: 'Poppins', sans-serif;
+    font-family: 'Raleway', sans-serif;
+    background-image: url('../img/background2.jpeg');
+    background-size: cover;
+    background-position: center; 
+    background-repeat: no-repeat;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    margin: 0;
+    align-items: center;
+    justify-content: center;
+    color: blacks;
 }
 
 
-h1, h2 {
-    color: #333;
+body::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background-color: rgba(175, 227, 233, 0.5);  /* Adjust opacity as needed */
+    z-index: -1;  /* Place the overlay below the content */
 }
+
+
+header {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background-color: #333;
+    color: #fff;
+    padding: 10px 0;
+    text-align: center;
+}
+
+nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+}
+
+nav li {
+    margin: 0 15px;
+}
+
+nav a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.2s;
+}
+
+nav a:hover {
+    color: #f4f4f4;
+}
+
+.clock {
+    font-size: 3em;
+    font-weight: bold;
+}
+
+footer {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    background-color: #333;
+    color: #fff;
+    padding: 10px 0;
+    text-align: center;
+}
+
+
+.clock {
+    width: 200px;
+    height: 200px;
+    border: 5px solid #333;
+    border-radius: 50%;
+    position: relative;
+}
+
+.hand {
+    position: absolute;
+    bottom: 50%;
+    left: 50%;
+    transform-origin: 50% 100%;
+    transform: rotate(90deg);
+    z-index: 1;
+}
+
+.hour {
+    width: 6px;
+    height: 50px;
+    background: #000;
+}
+
+.minute {
+    width: 4px;
+    height: 70px;
+    background: #666;
+}
+
+.second {
+    width: 2px;
+    height: 90px;
+    background: #f00;
+}
+
+.clock-center {
+    width: 12px;
+    height: 12px;
+    background-color: #333;
+    border-radius: 50%;
+    position: absolute;
+    left: 50%;
+    bottom: 50%;
+    transform: translate(-50%, 50%);
+    z-index: 2;
+}
+
+.hour, .minute, .second {
+    /* ...other styles... */
+    transform-origin: 50% 100%;
+    transform: rotate(-90deg); /* This makes them start at 12 o'clock */
+}
+

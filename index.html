@@ -6,28 +6,40 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&family=Raleway:wght@200&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&family=Raleway:wght@400;600&display=swap" rel="stylesheet">   
     <link rel="stylesheet" href="css/styles.css">
-    <script src="js/"></script>
+    <link rel="stylesheet" href="/path/to/cdn/bootstrap.min.css" />
+    <script src="/path/to/cdn/jquery.slim.min.js"></script>
+    <script src="js/script.js" defer></script>
     <title>Welcome to Weather & Bus Route Alert</title>
 </head>
 <body>
-    <header>
-        <h1>Welcome to Weather & Bus Route Alert</h1>
+    <header class="header">
+        <nav>
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="weather.html">Weather Notification</a></li>
+                <li><a href="bus-route.html">Bus Routes</a></li>
+            </ul>
+        </nav>
     </header>
-    <nav>
-        <select onchange="location = this.value;">
-            <option value="index.html">Home</option>
-            <option value="weather.html">Weather</option>
-            <option value="bus-routes.html">Bus Routes</option>
-        </select>
-    </nav>
+
+    <main>
+        <div class="clock">
+            <div class="hand hour" id="hourHand"></div>
+            <div class="hand minute" id="minuteHand"></div>
+            <div class="hand second" id="secondHand"></div>
+            <div class="clock-center"></div>
+        </div>  
+    </main>
+    
     
 
 
-    <footer>
+
+    <!-- <footer>
         <p>&copy; 2023 Weather and Bus Alert App</p>
-    </footer>
+    </footer> -->
 
   
 
