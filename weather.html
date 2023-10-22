@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="js/script.js" defer></script>
+    <script src="js/script.js" defer></script>
+    <link rel="stylesheet" href="css/styles.css">
+    <title>Weather Notification Service</title>
+</head>
+
+<body>
+    <header class="header">
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="weather.html">Weather Notification</a></li>
+                <li><a href="bus-route.html">Bus Routes</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <div class="intro-section">
+        <h1>Welcome to Weather Notification Service</h1>
+        <p>
+            This Page will provide you with the service of displaying he weather at your location
+            Please fill out the form belove.
+        </p> 
+
+        <form id="user-details">
+            <table>
+                <tr>
+                    <td>Location (City):</td>
+                    <td><input type="text" id="city-name"></td>
+                </tr>
+                <tr>
+                    <td colspan="2">
+                        <button type="button" onclick="fetchWeather()">Submit</button>
+                    </td>
+                </tr>
+                
+            </table>
+        </form>
+        
+        <div id="weather-info" style="display: none;">
+            <h3>Weather in <span id="location-name"></span>:</h3>
+            <p>Temperature: <span id="temperature"></span>°C</p>
+            <p>Condition: <span id="condition"></span></p>
+            <p>Humidity: <span id="humidity"></span>%</p>
+        </div>
+    </div>
+
+    <footer>
+        <p>&copy; 2023 Weather and Bus Alert App</p>
+    </footer>
+   
+    
+    
+</body>
+
+</html>
